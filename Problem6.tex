@@ -2,3 +2,37 @@ For general vectors $\vec{a}$, $\vec{b}$, and $\vec{c}$ show by expanding in com
 \begin{equation*}
 	\left(\vec{a} \times \vec{b}\right) \times \vec{c}=\left(\vec{a}\cdot\vec{c}\right)\vec{b}-\left(\vec{b}\cdot\vec{c}\right)\vec{a}
 \end{equation*}
+
+Decomposing the right side into component form and expanding results in:
+\begin{equation*}
+\left(a_xc_x+a_yc_y+a_zc_z\right)b_x-\left(b_xc_x+b_yc_y+b_zc_z\right)a_x
+\end{equation*}
+\begin{equation*}
+\left(a_xc_x+a_yc_y+a_zc_z\right)b_y-\left(b_xc_x+b_yc_y+b_zc_z\right)a_y
+\end{equation*}
+\begin{equation*}
+\left(a_xc_x+a_yc_y+a_zc_z\right)b_z-\left(b_xc_x+b_yc_y+b_zc_z\right)a_z
+\end{equation*}
+
+Simplification and combing of terms yields:
+\begin{equation*}
+\left(a_yc_y+a_zc_z\right)b_x-\left(b_yc_y+b_zc_z\right)a_x
+\end{equation*}
+\begin{equation*}
+\left(a_xc_x+a_zc_z\right)b_y-\left(b_xc_x+b_zc_z\right)a_y
+\end{equation*}
+\begin{equation*}
+\left(a_xc_x+a_yc_y\right)b_z-\left(b_xc_x+b_yc_y\right)a_z
+\end{equation*}
+
+Moving to the left side and computing $\vec{a}\times \vec{b}$ yields:
+\begin{equation*}
+\vec{d}=\vec{a}\times\vec{b}=\left(a_yb_z-b_ya_z\right)\hat{i} -\left(a_xb_z-b_xa_z\right)\hat{j}+\left(a_xb_y-b_xa_y\right)\hat{k}
+\end{equation*}
+Computing the last cross product and simplifying:
+\begin{align*}
+\vec{d}\times\vec{c}=\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_x-\left(b_xc_x+b_yc_y+b_zc_z\right)a_x\right)\hat{i}- \\
+\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_y-\left(b_xc_x+b_yc_y+b_zc_z\right)a_y\right)\hat{j}+\\\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_z-\left(b_xc_x+b_yc_y+b_zc_z\right)a_z\right)\hat{k}
+\end{align*}
+
+Thus the equation is valid and shows that the cross product is non-associative
