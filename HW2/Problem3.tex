@@ -1,0 +1,16 @@
+Determine the angles in the triangle formed by the three vertices $P_1=\left(2,2,2\right)$, $P_2=\left(3,1,1\right)$, and $P_3=\left(3,3,3\right)$.\\
+
+\noindent Begin by determining the three vectors that connect the three points:
+	\begin{itemize}
+		\item $\vec{v_1}=P_1-P_2=\langle1,-1,-1\rangle$
+		\item $\vec{v_2}=P_3-P_2=\langle0,2,2\rangle$
+		\item $\vec{v_3}=P_1-P_3=\langle-1,-1,-1\rangle$
+	\end{itemize}
+Using the definition of the dot product, $\vec{a}\cdot\vec{b}=\|a\|\|b\|cos\theta$, the angles can be determined by:
+\begin{equation}
+	\theta=\arccos \frac{\vec{a} \cdot \vec{b}} {\|a\|\|b\|}	
+\end{equation}
+		
+		\fbox{\parbox{0.4\linewidth}{$\theta_{1-2}=\arccos\frac{-4}{\sqrt{3}\sqrt{8}}=2.52 rad$\par
+		$\theta_{2-3}=\arccos\frac{-4}{\sqrt{8}\sqrt{3}}=2.52 rad$\par
+		$\theta_{3-1}=\arccos\frac{1}{\sqrt{3}\sqrt{3}}=1.23 rad$\par}}
