@@ -13,9 +13,16 @@
 \usepackage{textcomp}
 \usepackage{enumitem}
 
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
 \author{Alan Burl}
 \title{ME 760 Homework 2}
-
 
 \begin{document}
 \maketitle

@@ -12,4 +12,52 @@ calculate:
 	\item $\boldsymbol{C}\boldsymbol{C}^T$
 \end{enumerate}
 \begin{enumerate}
-	\item 
+	\item Each element in the product can be expressed from equation \ref{eq:mat_mul} where $i$ and $j$ are the row and column indices respectively. 
+	\begin{equation}
+		\boldsymbol{C}^2_{i,j}=\sum_{n=1}^{3}C_{i,n}C_{n,j}
+		\label{eq:mat_mul}
+	\end{equation}
+The subsuquent calculations are seen below:
+	\begin{align*}
+		\boldsymbol{C}^2_{1,1}=4*4+6*6+2*2 =56\\
+		\boldsymbol{C}^2_{1,2}=4*6+6*0+2*3=30\\
+		\boldsymbol{C}^2_{1,3}=4*2+6*3+2*-1=24\\
+		\boldsymbol{C}^2_{2,1}=6*4+0*6+2*2=30\\
+		\boldsymbol{C}^2_{2,2}=6*6+0*0+3*3=45\\
+		\boldsymbol{C}^2_{2,3}=6*2+0*3+3*-1=9\\
+		\boldsymbol{C}^2_{3,1}=2*4+3*6+-1*2=24\\
+		\boldsymbol{C}^2_{3,2}=2*6+3*0+-1*3=9\\
+		\boldsymbol{C}^2_{3,3}=2*2+3*3+-1*-1=14
+	\end{align*}
+The resulting matrix therefore is:
+\begin{equation*}
+\boxed{
+\boldsymbol{C}^2=
+\begin{bmatrix}
+	56 &30&24\\30&45&9\\24&9&14
+\end{bmatrix}}
+\end{equation*}
+
+\item Calculation of the transpose, $\boldsymbol{C}^T$ of $\boldsymbol{C}$ is realized through equation \ref{eq:transpose}.
+\begin{equation}
+	C^T_{i,j}=C_{j,i}
+	\label{eq:transpose}
+\end{equation}
+Computation of $\boldsymbol{C}^T$, results in $\boldsymbol{C}^T=\boldsymbol{C}$. Thus the calculation of $\boldsymbol{C}\boldsymbol{C}^T$ is identical to that of (a). Thus the resulting matrix is:
+\begin{equation*}
+\boxed{
+\boldsymbol{C}^T\boldsymbol{C}=
+\begin{bmatrix}
+	56 &30&24\\30&45&9\\24&9&14
+\end{bmatrix}}
+\end{equation*}
+\item Similiar to (b), the calculation of $\boldsymbol{C}\boldsymbol{C}^T$ is identical to $\boldsymbol{C}^2$. Thus the resulting matrix is:
+\begin{equation*}
+\boxed{
+\boldsymbol{C}\boldsymbol{C}^T=
+\begin{bmatrix}
+	56 &30&24\\30&45&9\\24&9&14
+\end{bmatrix}}
+\end{equation*}
+\end{enumerate}
+	
