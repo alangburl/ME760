@@ -1,16 +1,45 @@
-Determine the angles in the triangle formed by the three vertices $P_1=\left(2,2,2\right)$, $P_2=\left(3,1,1\right)$, and $P_3=\left(3,3,3\right)$.\\
-
-\noindent Begin by determining the three vectors that connect the three points:
-	\begin{itemize}
-		\item $\vec{v_1}=P_1-P_2=\langle1,-1,-1\rangle$
-		\item $\vec{v_2}=P_3-P_2=\langle0,2,2\rangle$
-		\item $\vec{v_3}=P_1-P_3=\langle-1,-1,-1\rangle$
-	\end{itemize}
-Using the definition of the dot product, $\vec{a}\cdot\vec{b}=\|a\|\|b\|cos\theta$, the angles can be determined by:
-\begin{equation}
-	\theta=\arccos \frac{\vec{a} \cdot \vec{b}} {\|a\|\|b\|}	
-\end{equation}
-		
-		\fbox{\parbox{0.4\linewidth}{$\theta_{1-2}=\arccos\frac{-4}{\sqrt{3}\sqrt{8}}=2.52 rad$\par
-		$\theta_{2-3}=\arccos\frac{-4}{\sqrt{8}\sqrt{3}}=2.52 rad$\par
-		$\theta_{3-1}=\arccos\frac{1}{\sqrt{3}\sqrt{3}}=1.23 rad$\par}}
+For each of the sets below determine if the set constitutes a vector space or not. Give a reason for your answer. If you conclude the set is a vector space, determine its dimension and provide a basis.
+	\begin{enumerate}
+		\item all vectors in $R^3$ satisfying $v_1-3v_2+2v_3=$ where $v_i$ are teh components of a vector $\boldsymbol{v}$
+		\item all functions $y\left(x\right)= a \cos x+ b\sin x$ with arbitrary real constants $a$ and $b$
+		\item all skew-symmetric 2x2 matrices
+		\item all 2x2 matrices with $a_{11}+a_{22}=0$
+		\item all $m \times m$ matrices with positive elements
+	\end{enumerate}
+	
+	A vector space is defined by the following paramenters:
+		\begin{itemize}
+			\item $\boldsymbol{x}+\boldsymbol{y}=\boldsymbol{y}+\boldsymbol{x}$
+			\item $\left(\boldsymbol{x}+\boldsymbol{y}\right)+\boldsymbol{z}=\boldsymbol{x}+\left(\boldsymbol{y}+\boldsymbol{z}\right)$
+			\item $\boldsymbol{x}+0=0+\boldsymbol{x}$
+			\item $\boldsymbol{x}+ -\boldsymbol{x}=0$
+			\item $r\left(s\boldsymbol{x}\right)=\left(rs\right)\boldsymbol{x}$
+			\item $\left(r+s\right)\boldsymbol{x}=r\boldsymbol{x}+s\boldsymbol{x}$
+			\item $r\left(\boldsymbol{x}+\boldsymbol{y}\right)=r\boldsymbol{x}+r\boldsymbol{y}$
+			\item $1\boldsymbol{x}=\boldsymbol{x}$
+			\end{itemize}
+\begin{enumerate}
+	\item This set constitutes a vector space as all eight constraints can be shown to be valid. This space has a dimension of 3 and a basis of:
+	\begin{equation*}
+		\begin{Bmatrix}
+			\begin{bmatrix}
+				1\\0\\0
+			\end{bmatrix},
+			\begin{bmatrix}
+				0\\-3\\0
+			\end{bmatrix},
+			\begin{bmatrix}
+				0\\0\\2
+			\end{bmatrix}
+		\end{Bmatrix}
+	\end{equation*}
+	\item Again, this is a vector space. With dimension of 1 and a basis of:
+	\begin{equation*}
+		\begin{Bmatrix}
+			\cos x\\\sin x
+		\end{Bmatrix}
+	\end{equation*}
+	\item Is a vector space with dimension of 2
+	\item Is a vector space with dimension of 2
+	\item A vector space is defined with dimension of m. 
+\end{enumerate}

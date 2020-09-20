@@ -22,8 +22,115 @@ Substituting values in and calculation of the determinate yields the following c
 \end{equation*}
 with a spectra of:
 \begin{equation*}
+	\boxed{
 	\lambda\left(\boldsymbol{A}\right)=
 	\begin{Bmatrix}
 		3&4&1
-	\end{Bmatrix}
+	\end{Bmatrix}}
 \end{equation*}
+Finding the determinate and expanding the characteristic polynomial yields:
+\begin{equation*}
+	\left(a-\lambda\right)^3-2\left(a-\lambda\right)=0
+\end{equation*}
+Factoring this yields the following solutions:
+	\begin{equation*}
+	\boxed{
+	\lambda\left(\boldsymbol{A}\right)=
+		\begin{Bmatrix}
+			a& a\pm\sqrt{2}
+		\end{Bmatrix}}
+	\end{equation*}
+	
+Eigenvector for each of the associated eigenvalues must satisfy:
+\begin{equation}
+	\boldsymbol{A}\boldsymbol{v}=\lambda\boldsymbol{v}
+\end{equation}
+Rearrangment to solve for $\boldsymbol{v}$:
+\begin{equation}
+	\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right) \cdot \boldsymbol{v}=0
+	\label{eq:vec}
+\end{equation}
+Each of the aforementioned eigenvalues are substituted into equation \ref{eq:vec} and solve yields the non-unique eigenvectors:
+\begin{enumerate}
+	\item $\lambda=1$
+		\begin{equation*}
+		\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)=
+		\begin{pmatrix}
+			2&5&3\\0&3&6\\0&0&0
+		\end{pmatrix}
+		\end{equation*}
+
+As can be seen, $\boldsymbol{v}$ is underdeterminate, as such any value for $\boldsymbol{v}_3$ can be used, 2 is chosen. Using this and substituiting into the other equation yields:
+	\begin{equation*}
+	\boxed{
+			\boldsymbol{v}\left(\lambda=1\right)=
+		\begin{Bmatrix}
+			7\\-4\\2
+		\end{Bmatrix}}
+	\end{equation*}
+
+\item $\lambda=3$
+		\begin{equation*}
+		\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)=
+		\begin{pmatrix}
+			0&5&3\\0&1&6\\0&0&-2
+		\end{pmatrix}
+		\end{equation*}
+Again, the system is underdeterminate, thus $\boldsymbol{v}_1=$ is chosen for simplicity, resulting in the following eigenvector
+	\begin{equation*}
+	\boxed{
+			\boldsymbol{v}\left(\lambda=3\right)=
+		\begin{Bmatrix}
+			1\\0\\0
+		\end{Bmatrix}}
+	\end{equation*}
+\item $\lambda=4$
+		\begin{equation*}
+		\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)=
+		\begin{pmatrix}
+			-1&5&3\\0&0&6\\0&0&-3
+		\end{pmatrix}
+		\end{equation*}
+It can clearly be seen this system is underdeterminate, as such $\boldsymbol{v}_2=1$ is chosen for simplicity. With the resulting eigenvector of:
+	\begin{equation*}
+	\boxed{
+			\boldsymbol{v}\left(\lambda=4\right)=
+		\begin{Bmatrix}
+			5\\1\\0
+		\end{Bmatrix}}
+	\end{equation*}
+\end{enumerate}
+Similiar to the previous problem, each eignevalue is substituted in the associated eigenvector
+\begin{enumerate}
+\item $\lambda=a$
+		\begin{equation*}
+		\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)=
+		\begin{pmatrix}
+			0&1&0\\1&0&1\\0&1&0
+		\end{pmatrix}
+		\end{equation*}
+Choosing $\boldsymbol{v}_1=1$, the eigenvector becomes:
+		\begin{equation*}
+	\boxed{
+			\boldsymbol{v}\left(\lambda=a\right)=
+		\begin{Bmatrix}
+			1\\0\\-1
+		\end{Bmatrix}}
+	\end{equation*}
+	
+\item $\lambda=a\pm\sqrt{2}$
+		\begin{equation*}
+		\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)=
+		\begin{pmatrix}
+			\pm\sqrt{2}&1&0\\1&\pm\sqrt{2}&1\\0&1&\pm\sqrt{2}
+		\end{pmatrix}
+		\end{equation*}
+		Simplification of both eignevalue solutions yields a trivial eigenvector of:
+				\begin{equation*}
+	\boxed{
+			\boldsymbol{v}\left(\lambda=a\pm\sqrt{2}\right)=
+		\begin{Bmatrix}
+			0\\0\\0
+		\end{Bmatrix}}
+	\end{equation*}
+\end{enumerate}
