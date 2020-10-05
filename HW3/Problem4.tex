@@ -1,23 +1,10 @@
-What is the equation of the plane containing the triangle of the previous problem?\\
+Do there exist real symmetric 3x3 matrices that are also orthogonal? If so give an example.
 
-\noindent Equation of the plane can be expressed from a point and a vector orthogonal to the plane, using $\vec{v_1}$ and $ \vec{v_2}$ from the previous problem to find a normal vector:
-	\begin{equation}
-	 \vec{n}=\vec{v_1} \times \vec{v_2}=\begin{vmatrix} \vec{v_{11}} & \vec{v_{13}} \\ \vec{v_{21}} &\vec{v_{23}}\end{vmatrix}
-	 -\begin{vmatrix} \vec{v_{12}} & \vec{v_{13}} \\ \vec{v_{22}} &\vec{v_{23}}\end{vmatrix}
-	+ \begin{vmatrix} \vec{v_{22}} & \vec{v_{23}} \\ \vec{v_{22}} &\vec{v_{23}}\end{vmatrix}
-	\label{eq:cross}	
-	\end{equation}
-Substituting values into equation \ref{eq:cross} and substituiting yields: 
+Yes, they exist. As by definition they don't contradict each other. An example is:
 \begin{equation*}
-	\vec{n}=0\hat{i}+2\hat{j}-2\hat{k}
-\end{equation*}
-Using equation \ref{eq:plane} where $a$, $b$, and $c$ come from $\vec{n}$ and $x_0$, $y_0$, and $z_0$ are values from $P_1$.
-\begin{equation}
-	a\left(x-x_0\right)+b\left(y-y_0\right)+c\left(z-z_0\right)=0
-	\label{eq:plane}
-\end{equation}
-Substituiting values in results in the equation of the plane being:
-\begin{equation*}
-	\boxed{
-	2y-2z=0}
+	\begin{pmatrix}
+		\frac{-7}{9} & \frac{4}{9} &\frac{4}{9}\\
+		\frac{4}{9} & \frac{-1}{9} &\frac{8}{9}\\
+		\frac{4}{9} & \frac{8}{9} &\frac{-1}{9}\\
+	\end{pmatrix}
 \end{equation*}

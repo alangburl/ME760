@@ -2,7 +2,11 @@ Prove taht trace of a square real of complex matrix A equals the sum of its eige
 
 
 Proof:
-For any square matrix there exists a matrix $\boldsymbol{P}$ such that $\bodsymbol{J}=\boldsymbol{P}\boldsymbol{A}\boldsymbol{P^{-1}}$ where $\boldsymbol{J}$ is Jordan Conical form. 
+For any square matrix there exists a matrix $\boldsymbol{P}$ such that $\boldsymbol{J}=\boldsymbol{P}\boldsymbol{A}\boldsymbol{P^{-1}}$ where $\boldsymbol{J}$ is Jordan Conical form. Which has eigenvalues for its diagonal elements. Thus:
+\begin{equation*}
+tr\left(\boldsymbol{D}\right)=\sum_i^n \lambda_i=\sum_j^n D_{jj}
+\end{equation*}
+Using definitions of the trace: $tr\left(\boldsymbol{D}\right)=tr\left(\boldsymbol{P}\boldsymbol{A}\boldsymbol{P^{-1}}\right)=tr\left(\boldsymbol{A}\boldsymbol{P}\boldsymbol{P^{-1}}\right)=tr\left(\boldsymbol{A}\right)$
 
 Example: (Using matrix from probelm 6)
 The eigenvalues can be found from the characteristic polynomial:

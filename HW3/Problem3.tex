@@ -1,10 +1,19 @@
 Prove that the eigenvectors of a real symmetric matrix corresponding to different eigenvalues are orthogonal.
 
-Proof: Let $a,b$ be two unique eigenvalues with corresponding eigenvectors $\boldsymbol{v},\boldsymbol{w}$. $\boldsymbol{v}, \boldsymbol{w}$ are shown to be orthogonal when the dot product, $\boldsymbol{v}\cdot \boldsymbol{w}=0$
+Let $a,b$ be two unique eigenvalues with corresponding eigenvectors $\boldsymbol{v},\boldsymbol{w}$. $\boldsymbol{v}, \boldsymbol{w}$ are shown to be orthogonal when the dot product, $\boldsymbol{v}\cdot \boldsymbol{w}=0$
 \begin{equation*}
 	\begin{split}
 		a\left(\boldsymbol{v}\cdot \boldsymbol{w}\right)&=a\boldsymbol{v}\cdot \boldsymbol{w} \\
 		&=\boldsymbol{A}\boldsymbol{v} \cdot \boldsymbol{w}\\
-		&=
+		&=\boldsymbol{v}\cdot \boldsymbol{A^{T}}\boldsymbol{w}\\
+		&=\boldsymbol{v}\cdot \boldsymbol{A}\boldsymbol{w}\\
+		&=\boldsymbol{v}\cdot \boldsymbol{b}\boldsymbol{w}\\
+		&=b\left(\boldsymbol{v}\cdot \boldsymbol{w}\right)
 	\end{split}
 \end{equation*}
+This is made possible using the identity of $\boldsymbol{A}=\boldsymbol{A^T}$.
+Rearranging this results in:
+\begin{equation*}
+	\left(a-b\right)\left(\boldsymbol{v}\cdot\boldsymbol{w}\right)=0
+\end{equation*}
+Therefore they are orthogonal.

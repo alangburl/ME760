@@ -1,38 +1,54 @@
-For general vectors $\vec{a}$, $\vec{b}$, and $\vec{c}$ show by expanding in component form:
+Find the linear transformation that diagonalizes:
 \begin{equation*}
-	\left(\vec{a} \times \vec{b}\right) \times \vec{c}=\left(\vec{a}\cdot\vec{c}\right)\vec{b}-\left(\vec{b}\cdot\vec{c}\right)\vec{a}
+	\begin{pmatrix}
+		16&0&0\\48&-8&0\\84&-24&4
+	\end{pmatrix}
 \end{equation*}
 
-Decomposing the right side into component form and expanding results in:
+Finding the eigenvalues from the characteristic polynomial:
 \begin{equation*}
-\left(a_xc_x+a_yc_y+a_zc_z\right)b_x-\left(b_xc_x+b_yc_y+b_zc_z\right)a_x
+	\boldsymbol{A}-\lambda\boldsymbol{I}=
+		\begin{pmatrix}
+		16-\lambda&0&0\\48&-8-\lambda&0\\84&-24&4-\lambda
+	\end{pmatrix}
 \end{equation*}
+The factorized characteristic polynomial is therefore:
 \begin{equation*}
-\left(a_xc_x+a_yc_y+a_zc_z\right)b_y-\left(b_xc_x+b_yc_y+b_zc_z\right)a_y
+	\left(16-\lambda\right)\left(-8-\lambda\right)\left(4-\lambda\right)=0
 \end{equation*}
-\begin{equation*}
-\left(a_xc_x+a_yc_y+a_zc_z\right)b_z-\left(b_xc_x+b_yc_y+b_zc_z\right)a_z
-\end{equation*}
+Leading to eigenvalues of $\begin{bmatrix} 16&-8&4\end{bmatrix}$.
 
-Simplification and combing of terms yields:
-\begin{equation*}
-\left(a_yc_y+a_zc_z\right)b_x-\left(b_yc_y+b_zc_z\right)a_x
+The eigenvalues are used to compute the eigenvectors, $\boldsymbol{Y}=\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)\boldsymbol{x}=0$:
+\begin{itemize}
+	\item $\lambda=4$
+	\begin{equation*}
+		\boldsymbol{Y}=
+		\begin{pmatrix}
+			12&0&0\\48&-12&0\\84&-24&0
+		\end{pmatrix}
+	\end{equation*}
+Reducing to RREF results in the eigenvector $\begin{bmatrix}0&0&1\end{bmatrix}^T$
+\item $\lambda=-8$
+	\begin{equation*}
+		\boldsymbol{Y}=
+		\begin{pmatrix}
+			8&0&0\\48&0&0\\84&-24&-4
+		\end{pmatrix}
+	\end{equation*}
+Reducing to RREF results in the eigenvector $\begin{bmatrix}0&\frac{1}{2}&1\end{bmatrix}^T$
+\item $\lambda=16$
+	\begin{equation*}
+		\boldsymbol{Y}=
+		\begin{pmatrix}
+			0&0&0\\48&-24&0\\84&-24&-16
+		\end{pmatrix}
+	\end{equation*}
+Reducing to RREF results in the eigenvector $\begin{bmatrix}\frac{1}{3}&\frac{2}{3}&1\end{bmatrix}^T$
+\end{itemize}
+Combining these result in the transformation matrix:
+\begin{equation*}\boxed{
+	\begin{pmatrix}
+		0&0&\frac{1}{3}\\0&\frac{1}{2}&\frac{2}{3}\\1&1&1
+	\end{pmatrix}}
 \end{equation*}
-\begin{equation*}
-\left(a_xc_x+a_zc_z\right)b_y-\left(b_xc_x+b_zc_z\right)a_y
-\end{equation*}
-\begin{equation*}
-\left(a_xc_x+a_yc_y\right)b_z-\left(b_xc_x+b_yc_y\right)a_z
-\end{equation*}
-
-Moving to the left side and computing $\vec{a}\times \vec{b}$ yields:
-\begin{equation*}
-\vec{d}=\vec{a}\times\vec{b}=\left(a_yb_z-b_ya_z\right)\hat{i} -\left(a_xb_z-b_xa_z\right)\hat{j}+\left(a_xb_y-b_xa_y\right)\hat{k}
-\end{equation*}
-Computing the last cross product and simplifying:
-\begin{align*}
-\vec{d}\times\vec{c}=\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_x-\left(b_xc_x+b_yc_y+b_zc_z\right)a_x\right)\hat{i}- \\
-\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_y-\left(b_xc_x+b_yc_y+b_zc_z\right)a_y\right)\hat{j}+\\\left(\left(a_xc_x+a_yc_y+a_zc_z\right)b_z-\left(b_xc_x+b_yc_y+b_zc_z\right)a_z\right)\hat{k}
-\end{align*}
-
-Thus the equation is valid and shows that the cross product is non-associative
+	
