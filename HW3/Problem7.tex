@@ -1,0 +1,35 @@
+Line $L$ passes through the two points $P_1=\left(-2,-2,-2\right)$ and $P_2=\left(-1,-1,-1\right)$.
+\begin{enumerate}[label=\alph*)]
+	\item What is the equation of this line?
+
+	\item What are the coordinates of the two points of intersection of this line with a sphere of radius 2 centered at $\left( 2,2,2\right)$?
+\end{enumerate}
+
+\begin{enumerate}[label=\alph*)]
+	\item The vector parallel to the line is $\vec{v}=\langle 1 1 1 \rangle$. Thus the equation of the line can be represented using the vector and point $P_1$ by the following set of parametric equations:
+	
+	\begin{equation*}
+	\boxed{
+		\vec{r}=\langle -2, -2,-2\rangle +t\langle 1, 1, 1 \rangle}
+	\end{equation*}
+
+	\item The previous solution can be rewrote into component form and substituted into equation \ref{eq:sphere}, standard form of sphere equation.
+	
+	\begin{equation}
+		\left(x-x_c\right)^2+\left(y-y_c\right)^2+\left(z-z_c\right)^2=r^2
+		\label{eq:sphere}
+	\end{equation}
+
+	Substituiting and changing into terms of $t$ yields:
+	\begin{equation*}
+		\left[-2t-\left(x_c-1\right)\right]^2+\left[-2t-\left(y_c-1\right)\right]^2+\left[-2t-\left(z_c-1\right)\right]^2=r^2
+	\end{equation*}
+	After substituting values for the sphere center and radius, terms are combined and order to solve for $t$ using the quadratic equation. 
+	\begin{equation*}
+		3t^2-24t+44=0
+	\end{equation*}
+	This results in $t= 5.15$ and $t=2.85$. Substituting these back into the parametric set of equations results in two intersection points:
+\begin{equation*}\boxed{
+ \left(3.15, 3.15, 3.15\right) and \left(0.85, 0.85, 0.85\right)}
+\end{equation*}
+\end{enumerate}

@@ -1,0 +1,40 @@
+Show that the three vectors $\bf{u}=\hat{i}+\hat{j}-\hat{k}$, $\bf{v}=2\hat{j}+\hat{k}$ and $\bf{w}=2\hat{i}+4\hat{j}-\hat{k}$ are coplanar. \\
+
+\noindent Three vectors are can be showed to be coplanar if the scalar triple products evaluates to $0$
+\begin{equation}
+	\left[\vec{a},\vec{b},\vec{c}\right]=\vec{a}\cdot\left(\vec{b}\times\vec{c}\right)
+	\label{eq:triple}
+\end{equation}
+
+Equation \ref{eq:triple} is equivalant to the determinant below:
+\begin{equation}
+d=
+\begin{vmatrix} 
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3 \\
+\end{vmatrix}
+\end{equation}
+Substituting values from \textbf{u}, \textbf{v}, and \textbf{w}:
+$$
+\begin{vmatrix}
+1& 1&-1\\
+0 & 2 &1\\
+2&4&-1
+\end{vmatrix}
+$$
+The determinant of which is evaluated as:
+\begin{equation}
+	d= a_1 \begin{vmatrix} b_2 & b_3 \\ c_2 & c_3\end{vmatrix}
+	    -a_2 \begin{vmatrix} b_1 & c_1 \\ b_1 & c_3\end{vmatrix}
+	   +a_3\begin{vmatrix} b_1 & b_2 \\ c_1 & c_2\end{vmatrix}
+\end{equation}
+Substituting values from \textbf{u}, \textbf{v}, and \textbf{w}:
+\begin{equation*}
+	d= 1 \begin{vmatrix} 2 & 1 \\ 4 & -1\end{vmatrix}
+	    -1 \begin{vmatrix}0 & 1 \\ 2 & -1\end{vmatrix}
+	   -1\begin{vmatrix} 0 & 2 \\ 2& 4\end{vmatrix}
+\end{equation*}
+Upon evaluation, $d=0$, therefore the vectors are coplanar.
+
+
