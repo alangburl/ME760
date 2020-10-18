@@ -1,54 +1,24 @@
-Find the linear transformation that diagonalizes:
-\begin{equation*}
-	\begin{pmatrix}
-		16&0&0\\48&-8&0\\84&-24&4
-	\end{pmatrix}
-\end{equation*}
-
-Finding the eigenvalues from the characteristic polynomial:
-\begin{equation*}
-	\boldsymbol{A}-\lambda\boldsymbol{I}=
-		\begin{pmatrix}
-		16-\lambda&0&0\\48&-8-\lambda&0\\84&-24&4-\lambda
-	\end{pmatrix}
-\end{equation*}
-The factorized characteristic polynomial is therefore:
-\begin{equation*}
-	\left(16-\lambda\right)\left(-8-\lambda\right)\left(4-\lambda\right)=0
-\end{equation*}
-Leading to eigenvalues of $\begin{bmatrix} 16&-8&4\end{bmatrix}$.
-
-The eigenvalues are used to compute the eigenvectors, $\boldsymbol{Y}=\left(\boldsymbol{A}-\lambda\boldsymbol{I}\right)\boldsymbol{x}=0$:
+Find the unit normal
 \begin{itemize}
-	\item $\lambda=4$
-	\begin{equation*}
-		\boldsymbol{Y}=
-		\begin{pmatrix}
-			12&0&0\\48&-12&0\\84&-24&0
-		\end{pmatrix}
-	\end{equation*}
-Reducing to RREF results in the eigenvector $\begin{bmatrix}0&0&1\end{bmatrix}^T$
-\item $\lambda=-8$
-	\begin{equation*}
-		\boldsymbol{Y}=
-		\begin{pmatrix}
-			8&0&0\\48&0&0\\84&-24&-4
-		\end{pmatrix}
-	\end{equation*}
-Reducing to RREF results in the eigenvector $\begin{bmatrix}0&\frac{1}{2}&1\end{bmatrix}^T$
-\item $\lambda=16$
-	\begin{equation*}
-		\boldsymbol{Y}=
-		\begin{pmatrix}
-			0&0&0\\48&-24&0\\84&-24&-16
-		\end{pmatrix}
-	\end{equation*}
-Reducing to RREF results in the eigenvector $\begin{bmatrix}\frac{1}{3}&\frac{2}{3}&1\end{bmatrix}^T$
+	\item to teht surface $ax+by+cz=d=$ at any point $P$
+	\item to the surface $x^2+y^2+z^2=26$ at the point $\left(1,4,3\right)$
 \end{itemize}
-Combining these result in the transformation matrix:
-\begin{equation*}\boxed{
-	\begin{pmatrix}
-		0&0&\frac{1}{3}\\0&\frac{1}{2}&\frac{2}{3}\\1&1&1
-	\end{pmatrix}}
+
+The unit normal vector is described by Equation \ref{eq:unit_normal}.
+\begin{equation}
+	\hat{n}=\frac{\nabla f}{\|\nabla f\|}
+	\label{eq:unit_normal}
+\end{equation}
+
+\begin{itemize}
+	\item Using Equation \ref{eq:unit_normal} the resulting vector.
+	\begin{equation*}
+	\boxed{
+		\hat{\boldsymbol{n}}=\frac{a\boldsymbol{i}+b\boldsymbol{j}+c\boldsymbol{k}}{\sqrt{a^2+b^2+c^2}}}
+	\end{equation*}
+	\item The gradient of the function is first calculated: $\nabla f=2x\boldsymbol{i}+2y\boldsymbol{j}+2z\boldsymbol{k}$. Thus leading to the magnitude as $\|\nabla f\|=2\sqrt{x^2+y^2+z^2}=\sqrt{26}$. Thus the unit normal vector is:
+\begin{equation*}
+	\boxed{
+		\hat{\boldsymbol{n}}=\frac{26}{\sqrt{26}}\left(\boldsymbol{i}+4\boldsymbol{j}+3\boldsymol{k}
+		}
 \end{equation*}
-	
