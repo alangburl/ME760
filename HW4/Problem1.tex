@@ -1,7 +1,17 @@
-Estimate an upper bound for th spectral radius of the following matrix. OCmpare this bound to the actual spectral radius. Show your work.
+Estimate an upper bound for the spectral radius of the following matrix. Compare this bound to the actual spectral radius. Show your work.
 \begin{equation*}
 	\boldsymbol{A}=
 		\begin{pmatrix}
 			7&0&3\\2&1&1\\2&0&2
 		\end{pmatrix}
 \end{equation*}
+
+The spectral radius is the largest eigenvalue, explicitly found by $\|\boldsymbol{A}-\lambda \boldsymbol{I}\|=0$
+Expading this and evaluating results in a largest eigenvalue of $8$.
+
+An approximation for the spectral radius is found by using the power method, seen in Eqation \ref{eq:spec}. The approximation will be considered to be convereged when no change is seen in 2 decimal place.
+\begin{equation}
+	\mu\left(A\right)=\lim_{n \to \infty} \frac{\|x^n\|}{\|x^{n-1}}
+	\label{eq:spec}
+\end{equation}
+Where $x^n$ is found by $x^n=\boldsymbol{A}x^{n-1}$.
