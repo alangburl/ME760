@@ -23,5 +23,5 @@ def power_iteration(A, num_simulations: int):
         i+=1
     f.close()
     return b_k
-b=[[3, 5,3], [0, 4,6],[0,0,1]]
-a=power_iteration(np.array(b), 27)
+b=[[7, 0,3], [2, 1,1],[2,0,2]]
+a=power_iteration(np.array(b), 5)
