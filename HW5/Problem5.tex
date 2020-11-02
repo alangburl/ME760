@@ -1,4 +1,4 @@
-Consider teh vecotr function $F=[e^z,e^z\sin y, e^z \cos y]$ and the surface $z=y^2, 0\leq x\leq4, 0\leq y\leq2$. Stoke's theorem states that
+Consider the vector function $F=[e^z,e^z\sin y, e^z \cos y]$ and the surface $z=y^2, 0\leq x\leq4, 0\leq y\leq2$. Stoke's theorem states that
 	\begin{equation*}
 		\int\int_S\left(\nabla\times F\right)\cdot\hat{n}dS=\oint_C F\cdot dr
 	\end{equation*}
@@ -14,5 +14,13 @@ Consider teh vecotr function $F=[e^z,e^z\sin y, e^z \cos y]$ and the surface $z=
 			\hat{n}=-g_x(x,y)\boldsymbol{i}-g_y(x,y)\boldsymbol{j}+\boldsymbol{k}
 			\label{eq:g}
 		\end{equation}
-	Where $g_x$ and $g_y$ are the partial derivatives of surface S wrt $x,y$ respectively. Finding $\hat{n}$ and computing the dot product yields: $2ye^z$. Thus the resulting 
+	Where $g_x$ and $g_y$ are the partial derivatives of surface S wrt $x,y$ respectively. Finding $\hat{n}$ and computing the dot product yields: $2ye^z$. Computing the integral yields $\boxed{16e^z}$.
+	
+	\item The curve must first be parameterized into $t$. Letting $y=t$, the vector becomes $\langle0, t, e^z\cos t\rangle$
+	Using the form $\int_0^{2\pi} Mdx+Ndy+Pdz$, the integral can be rewrote into it's parametrized form. 
+	
+	\begin{equation*}
+		\int_0^{2\pi} t+e^{2z}\cos^2tdt
+	\end{equation*}
+	Evaluation of this yields $\boxed{\pi+\frac{e^{2\pi}}{3}}$. I believe my parameterization is incorrect, but am unsure where.
 \end{enumerate}
