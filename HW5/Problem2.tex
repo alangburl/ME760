@@ -1,0 +1,29 @@
+Given the parametric form of a cone $r\left(u,v\right)= [ u\cos v, u\sin v, cu]$
+\begin{enumerate}
+	\item find an explicit representation of the form $z=f\left(x,y\right)$
+	\item find and identify the paramer curves defind as $u=const$ and $v=const$
+	\item find the normal vector $N$ to the conical surface
+\end{enumerate}
+
+\begin{enumerate}
+	\item Let $x,y,z= u\cos v , u\sin v, cu$ respectively. Squaring $x$ and $y$ and summing them yields: $x^2+y^2= u^2\left( \cos^2v+\sin^2v\right)$. Solving for $u$ from this: $u=\sqrt{x^2+y^2}$. Using this to substitute into $z$ results in the explicity form of the equation:
+	\begin{equation}
+	\boxed{
+		z=c\sqrt{x^2+y^2}
+		}
+	\end{equation}
+	
+	\item From (a), it is seen that $\boxed{u=\sqrt{x^2+y^2}}$. $v$ is found from the division of $x$ and $y$. Using this and trigonemetric definitions yields: $\boxed{v=tan^{-1} \frac{x}{y}}$. 
+	
+	\item The normal vector is found using equation \ref{eq:norm}
+		\begin{equation}
+			\nabla f=0
+			\label{eq:norm}
+		\end{equation}
+		Differentiation of the explicit form with respect to $x,y,z$ results in the normal vector:
+		\begin{equation*}
+			\boxed{
+				\boldsymbol{N}=\frac{2xc}{\sqrt{x^2+y^2}}\boldsymbol{i}+\frac{2yc}{\sqrt{x^2+y^2}}\boldsymbol{j}-\boldsymbol{k}
+				}
+		\end{equation*}
+\end{enumerate}

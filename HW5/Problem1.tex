@@ -1,0 +1,38 @@
+Verify the contour integral $\int_C \left[2xy^2dx+2x^2ydy+dz\right]$ is independent of the path. Evaluate this integral between the points $\left(0,0,0\right)$ and $\left(a,b,c\right)$.
+
+A line integral with the vector function of the form $\boldsymbol{F}=P\boldsymbol{i}+Q\boldsymbol{j}+R\boldsymbol{k}$ is path indenpendent if $curl \boldsymbol{F}=0$. The curl of the vector is found and evaluated below using equation \ref{eq:curl}.
+
+\begin{equation}
+	curl \boldsymbol{F}=
+		\begin{vmatrix}
+			\boldsymbol{i} &\boldsymbol{j} & \boldsymbol{k} \\
+			\frac{\partial}{\partial x} & \frac{\partial}{\partial y} &\frac{\partial}{\partial z}\\
+			P & Q & R 
+		\end{vmatrix}
+		=0
+	\label{eq:curl}
+\end{equation}
+ Expansion of the above yields the following:
+\begin{equation}
+	curl \boldsymbol{F}= \frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\boldsymbol{i} -
+							\frac{\partial R}{\partial x}-\frac{\partial P}{\partial z}\boldsymbol{j}+
+							\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\boldsymbol{k}
+	\label{eq:curl2}
+\end{equation}
+
+The two non-trivial partial derivatives are shown below:
+\begin{equation*}
+	\frac{\partial Q}{\partial x}=4xy
+\end{equation*}
+\begin{equation*}
+	\frac{\partial P}{\partial y}=4xy
+\end{equation*}
+Substituting the values into equation \ref{eq:curl2}, yields $curl \boldsymbol{F}=0$, thus the contour integral is independent of the path.
+
+Evaluation of this leads to $f=x^2+y^2+z$. Thus evaluating using the form $f\left(B\right)-\left(A\right)$ yields:
+\begin{equation*}
+\boxed{
+	a^2b^2+c}
+	\end{equation*}
+
+
