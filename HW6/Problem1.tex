@@ -1,0 +1,16 @@
+Under what conditions is $\left(ax+by\right)dx+\left(kx+ly\right)dy$ an exact differential? Here $a, b, k and l$ are constants. Solve the exact equation.
+
+A differential is exact if it can be represented in the form $\frac{dy}{dx}N(x,y)+M(x,y)=0$. The test for exactness is seen in equation \ref{eq:exact}.
+\begin{equation}
+	\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}
+	\label{eq:exact}
+\end{equation}
+
+From this it can be seen that for the equation to be exact, $b=k$. 
+
+By first integrating $M$ with respect to $x$, $u(x,y)=\frac{ax^2}{2}+byx+p(y)$. Differentiating this function with respect to $y$ and setting equal to $N$ yields: $p\prime(y)=ly$, given that $b$ and $k$ are equal. Integrating $p(y)$ and substituting, it is found that:
+\begin{equation*}
+	\boxed {
+	F(x,y)=ax^2/2+byx+ly^2/2=C
+	}
+\end{equation*}

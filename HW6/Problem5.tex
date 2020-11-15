@@ -1,0 +1,18 @@
+Solve the ode $y\prime\prime+4y\prime+3y=65\cos 2x$ by
+\begin{enumerate}
+	\item The method of undertermined coefficients
+	\item The variation of parameters method
+\end{enumerate}
+
+\begin{enumerate}
+	\item Begin by guessing a possible solution of the form $A\cos 2x +B\sin 2x$. This can be differentiated and plugged into the ode. Doing so and reducing down yields $(-16A-8B)\cos 2x +(8A-16B)\sin 2x=65\cos 2x$. The two sides of the equation can be used to form two equations:
+\begin{align*}
+	(-16A-8B)&=65\\
+	(8A-16B)&=0
+\end{align*}
+Solving these equations simultaneously and plugging into the guess:
+\begin{equation*}
+	\boxed{y(x)=3.25\cos 2x +6.5 \sin 2x}
+\end{equation*}
+
+\end{enumerate}

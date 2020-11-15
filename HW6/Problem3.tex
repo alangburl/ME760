@@ -1,0 +1,24 @@
+Find the solution of 
+\begin{enumerate}
+	\item $y\prime(x)=x(4-y)$
+	\item $y\prime(x)+6x^2y=e^{-2x^3}/x^2$ with $y(1)=0$
+\end{enumerate}
+
+\begin{enumerate}
+	\item By seperating variables, this quickly becomes $dy(4-y)^{-1}=xdx$. By integrating both sides, this becomes $-ln(4-y)=\frac{x^2}{2}+C_1$. Solving for $y$ explicitly this yields:
+	\begin{equation*}
+	\boxed{
+		y=C_2-e^{-x^2/2}
+		}
+	\end{equation*}
+	
+	\item This is a first order, linear differential equation, as such the integrating factor is $q(x)=exp(\int 6x^2dx)=exp(2x^3)$. Thus multipling and integrating yields:
+	\begin{equation*}
+		y(x)=\frac{C}{e^{2x^3}}-\frac{1}{xe^{2x^3}}
+	\end{equation*}
+	After applying the boundary condition of $y(1)=0$:
+	\begin{equation*}
+	\boxed{
+		y(x)=\frac{1}{e^{2x^3}}-\frac{1}{xe^{2x^3}}}
+	\end{equation*}
+\end{enumerate}
