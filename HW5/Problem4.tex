@@ -1,44 +1,39 @@
-Sketch $\boldsymbol{r}\left(t\right)=\boldsymbol{i}\left(R\sin \omega t +\omega Rt\right)+\boldsymbol{j}\left(R\cos \omega t +R\right)$ taking $R=1$ and $\omega=1$. This curve is called a cycloid and is the path of a point on the rim of a wheel of radius $R$ that rolls without slipping aloing the x-axis. Find the velocity and acceleration at the minimum and maximum y-values of the curve.
-
-The function was plotted in python using a range from 0 to $4\pi$. 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\linewidth]{cycloid.png}
-	\caption{Sketch of cycloid with $R=1$ and $\omega=1$.}
-\end{figure}
-
-The minimum and maximum y-values are found at $\pi/2$ and 0 respectively.
-
-Velocity is the first derivative and acceleration is the second derivative, equations \ref{eq:vel} and \ref{eq:acc} indicate these respectively.
+Evaluate $\int \int_S F\cdot \hat{n} dA$ using the divergnece theorem when:
+\begin{enumerate}
+	\item $F=[x^3,y^3,z^3]$ and the surface is the sphere $x^2+y^2+z^2=9$
+	\item $F=[9x,ycosh^2x,-zsinh^2x]$ and teh surface is teh ellipsoid $4x^2+y^2+9z^2=36$
+\end{enumerate}
+The evaluation of the integral becomes significantly simplified when by using the equality in equation \ref{eq:gauss}
 
 \begin{equation}
-	\boldsymbol{v}=\boldsymbol{r}^\prime=\left(\cos t +1\right)\boldsymbol{i}-\boldsymbol{j}\sin t
-	\label{eq:vel}
-\end{equation}
-\begin{equation}
-	\boldsymbol{a}=\boldsymbol{r}^{\prime\prime}=-\boldsymbol{i}\cos t-\boldsymbol{j}\cos t
-	\label{eq:acc}
+	\int \int_S F\cdot \hat{n} dA=\int\int\int_V\nabla F\cdot dV
+	\label{eq:gauss}
 \end{equation}
 
-Evaluation of the velocity at the minimum and maximum result in:
+\begin{enumerate}
+	\item The $div \boldsymbol{F}$ is found to be $3x^2+3y^2+3z^2$, or when converted to sphereical coordinates, $\rho^4\sin \phi$. Thus applying the bounds of integration for a sphere in sphereical coordinates:
 	\begin{equation*}
-	\boxed{
-			\boldsymbol{v}_{max} =2\boldsymbol{i}
-			}
+		I=\int_0^3\int_0^\pi\int_0^{2\pi} \rho^4\sin\phi d\theta d\phi d\rho
 	\end{equation*}
-		\begin{equation*}
-	\boxed{
-		\boldsymbol{v}_{min} = \boldsymbol{i}-\boldsymbol{j}	
-			}
-	\end{equation*}
+	Integrating the above yields $\boxed{\frac{729\pi}{5}}$
 
-\begin{equation*}
-	\boxed{
-			\boldsymbol{a}_{max}=-\boldsymbol{j}
-	}
-\end{equation*}
-\begin{equation*}
-	\boxed{
-			\boldsymbol{a}_{min}=-\boldsymbol{i}
-	}
-\end{equation*}
+	\item The $div \boldsymbol{F}=10$ is found using the trig identity of $\cosh^2x-\sinh^2x=1$ 
+	The bounds of integration are left in rectangular form, with the resulting integration being:
+	\begin{equation*}
+		I=10\int_0^9\int_0^{\sqrt{36-4x^2}}\int_0^{\frac{\sqrt{36-4x^2-y^2}}{9}}dzdydx
+	\end{equation*}
+	Computing the first integral results in 
+	\begin{equation*}
+		I=\frac{10}{9}\int_0^9\int_0^{\sqrt{36-4x^2}} \sqrt{36-4x^2-y^2}dydx
+	\end{equation*}
+	Using integration tables found in Larson and Edwards Ninth Edition, the second integration is found to using the following form 
+	\begin{equation}
+		\int \sqrt{a^2-u^2}du=\frac{1}{2}\left(u\sqrt{a^2-u^2}+a^2 \sin^{-1}\frac{u}{a}\right)+C
+	\end{equation}
+	Implementing this and evaluating leads to the final integral of the form
+		\begin{equation*}
+		I=\frac{5\pi}{18}\int_0^9 36-4x^2 dx
+	\end{equation*}
+	Evaluation of this leads to $\boxed{180\pi}$
+
+\end{enumerate} 

@@ -12,3 +12,18 @@ I=\int \int_s G\left(s\right)dS=\int \int_R G\left(r\left(u,v\right)\right)\vert
 		Evaluate the right-hand side fo this result.
 		
 \end{enumerate}
+
+\begin{enumerate}
+	\item Rewriting the function in polar coordinates yields: $r^2\cos^2\theta+r^2\sin^2\theta+z^2=9$ The $N$ vector is found using the cross of $r_\theta$ and $r_r$.
+
+	\item Assuming $G=z$ from the previous problem, this explicitly becomes $\sqrt{9-x^2-y^2}$. Computing the partials and rearranging the square root:
+	\begin{equation*}
+		\int \int \sqrt{9-x^2-y^2}\sqrt{1+\frac{4x^2+4y^2}{9-x^2-y^2}}dydx
+	\end{equation*}
+	Finding the bounds of integration results in
+	
+	\begin{equation*}
+		\int_0^3 \int_0^{\sqrt{9-x^2}} \sqrt{9-x^2-y^2}\sqrt{1+\frac{4x^2+4y^2}{9-x^2-y^2}}dydx
+	\end{equation*} 
+\end{enumerate}
+			
