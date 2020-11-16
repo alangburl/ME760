@@ -12,7 +12,23 @@ Solve the ode $y\prime\prime+4y\prime+3y=65\cos 2x$ by
 \end{align*}
 Solving these equations simultaneously and plugging into the guess:
 \begin{equation*}
-	\boxed{y(x)=3.25\cos 2x +6.5 \sin 2x}
+	\boxed{y(x)=3.25\cos 2x +6.5 \sin 2x+C}
 \end{equation*}
-
+	\item The particular solution of using the variation of parameters mehtod is found using equation \ref{eq:wronksian}.
+	\begin{equation}
+		y_p(x)=-y_1\int\frac{y_2g(x)}{W}dx+y_2\int \frac{y_1g(x)}{W}dx
+		\label{eq:wronksian}
+	\end{equation}
+	Given that $g(x)=\cos 2x$, it can be assumed that $y_1=\cos 2x$ and $y_2=\sin 2x$. By doing so the Wronskian is found below:
+	\begin{equation*}W=
+		\begin{vmatrix} 
+			\cos 2x & \sin 2x\\ -2\sin 2x & 2\cos 2x
+		\end{vmatrix}=2
+	\end{equation*}
+Plugging these values into \ref{eq:wronksian} and integrating yields:
+\begin{equation*}
+	\boxed{
+		y(x)=\frac{65x}{2}\sin 2x+\frac{65}{16}\sin 2x \sin 4x + \frac{65}{16}\cos 2x \cos 4x +C
+		}
+\end{equation*}
 \end{enumerate}

@@ -1,1 +1,21 @@
 What is the solutions to the initial value problem $y\prime\prime\prime\prime-y=0$ with $y(0)=-1$, $y\prime(0)=7$, $y\prime\prime(0)=-1$, and $y\prime\prime\prime(0)=7$.
+
+The general solution is found to be:
+\begin{equation*}
+	y(x)=c_1e^x+c_2e^{-x}+c_3\cos x+c_4\sin x
+\end{equation*}
+
+Apply the four initial value problems results in the following equations:
+\begin{align*}
+	c_1+c_2+c_3&=-1\\
+	c_1-c_2+c_4&=7\\
+	c_1+c_2-c_3&=-1\\
+	c_1-c_2-c_4&=7
+\end{align*}
+
+From this it can be seen that $c_3$ and $c_4$ must be $0$. This reduces to 2 equations, with two unknowns, solving these leads to:
+\begin{equation*}
+	\boxed{
+		y(x)=3e^x-4e^{-x}
+		}
+\end{equation*}	
